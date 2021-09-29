@@ -1,0 +1,27 @@
+version: '3'
+services:
+  intranet-react-front:
+      container_name: intranet-react-front
+      #image: nginx
+      build:
+        context: .
+        dockerfile: ./docker/node/development.DockerFile
+      restart: always
+      tty: true
+      ports:
+        - "4000:3000"   # express
+        #- "443"
+      #ports:
+      # - "8081:80"
+      volumes:
+        - ./:/usr/src
+        - /usr/src/node_modules # esto no me sobreescribe
+      #environment:
+      # - VIRTUAL_HOST=amigo-front.local
+        #- HOST=amigo-app-front
+        #- PORT=8081
+      networks:
+        - Webdevelopment
+networks:
+  Webdevelopment:
+    external: true

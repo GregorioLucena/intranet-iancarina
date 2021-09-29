@@ -82,7 +82,7 @@ const Index = () => {
       >
         <BusinessGroup />
       </Animated>
-      <Geolocation />
+      <Geolocation /> 
       <Footer />
     </React.Fragment>
   );

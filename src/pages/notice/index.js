@@ -218,7 +218,7 @@ const FullNotice = () => {
   const history = useHistory();
 
   const handleClick = () => {
-    console.log("entro");
+    // console.log("entro");
     history.goBack();
   };
   return (
@@ -236,7 +236,7 @@ const FullNotice = () => {
           <Row className="justify-content-center">
             <Col sm={12} md={4} lg={4} xl={4} xxl={4}>
               <div className="text-center float-md-left">
-                <Link onClick={handleClick}>
+                <Link to="/">
                   <img
                     src={footerlogo}
                     alt="footerLogo"
